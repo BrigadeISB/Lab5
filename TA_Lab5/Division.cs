@@ -18,7 +18,7 @@ namespace TA_Lab5
             InitializeComponent();
         }
 
-        MyHashTable<string, int> hashTable = new MyHashTable<string, int>(new MultiplicationHashFunction());
+        MyHashTable<string, int> hashTable = new MyHashTable<string, int>(new DivisionHashFunction());
 
         private void listBoxLoad()
         {

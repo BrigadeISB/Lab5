@@ -224,6 +224,30 @@ namespace TA_Lab5
             }
         }
 
+        public class DivisionHashFunction : IHashFunction<string>
+        {
+            public int ComputeHash(string key)
+            {
+                
+                const int M = 51;
+
+                double hashValue = GetStringCode(key) % M;
+
+                return (int)hashValue;
+            }
+
+            private static double GetStringCode(string key)
+            {
+                double code = 0;
+
+                foreach (char c in key)
+                {
+                    code += (int)c;
+                }
+
+                return code;
+            }
+        }
 
 
     }
